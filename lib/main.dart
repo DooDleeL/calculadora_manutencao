@@ -5,6 +5,7 @@ import 'package:calculadora_manutencao/components/Keyboard.dart';
 
 
 import 'Components/Menu.dart';
+import 'components/Screen.dart';
 
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Arruma isso',
+      title: 'Calculadora',
       theme: ThemeData(
 
         primarySwatch: Colors.blue,
@@ -36,13 +37,14 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   String calculation = '';
-  double result = 1;
+  double result = 0;
 
   addCharacter(String text) {
     setState(()  {
       calculation = calculation + text;
     });
   }
+
   calcResult() {
     setState(() {
       result = calcExpression(calculation);
@@ -50,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
   clearScreen() {
     setState(() {
-      calculation = '1';
+      calculation = '';
       result = 0;
     });
   }
@@ -67,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Em construção"),
+        title: Text("Início"),
       ),
       drawer: Menu(context),
       body: Center(

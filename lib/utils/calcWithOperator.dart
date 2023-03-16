@@ -10,7 +10,7 @@ calcWithOperator(double number1, double number2, String operator) {
       return number1 * number2;
     }
     case '/': {
-      return number1 / number1;
+      return number1 / number2;
     }
     default: {
       return 0;

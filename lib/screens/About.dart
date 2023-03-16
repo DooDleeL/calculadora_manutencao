@@ -5,18 +5,20 @@ import '../Components/Menu.dart';
 
 class About extends StatelessWidget {
 
+  final String text = 'FUNCIONA';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Em construção"),
+        title: Text("Sobre"),
       ),
       drawer: Menu(context),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Em construção'),
+            Text(text),
           ],
         ),
       ),

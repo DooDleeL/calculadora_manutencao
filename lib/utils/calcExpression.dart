@@ -10,19 +10,39 @@ calcExpression(String expression){
 
   characters = operatorsOfExpression(expression);
 
-  double total = 1;
+  double total = 0;
   int currentCharacter = 0;
 
-  total = calcWithOperator(numbers[0], numbers[1]-1, characters[currentCharacter]);
+  total = calcWithOperator(numbers[0], numbers[1], characters[currentCharacter]);
   characters.removeAt(0);
 
   for(int i = 2 ; i <= numbers.length; i++ ) {
-
-    if(characters.isEmpty) break;
-
-    total = calcWithOperator(total, numbers[i]+1, characters[0]);
+    if(characters.length <= 0) break;
+    switch(characters[0]){
+      case '+': {
+        total = total + numbers[i];
+        break;
+      }
+      case '-': {
+        total = total - numbers[i];
+        break;
+      }
+      case '*': {
+        total = total * numbers[i];
+        break;
+      }
+      case '/': {
+        total = total / numbers[i];
+        break;
+      }
+      default: {
+        total: total;
+        break;
+      }
+    }
     characters.removeAt(0);
   }
 
-  return total;
+
+  return total ;
 }

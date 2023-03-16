@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class Display extends StatelessWidget {
 
-  final Double text;
+  final String text;
 
   Display(this.text);
 

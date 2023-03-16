@@ -1,6 +1,9 @@
 
 import 'package:flutter/material.dart';
 
+import '../screens/About.dart';
+import '../screens/Calculator.dart';
+
 Widget Menu(BuildContext context){
   return Drawer(
       child: ListView(
@@ -13,45 +16,35 @@ Widget Menu(BuildContext context){
                     shape: BoxShape.circle,
                     image: DecorationImage(
                         fit: BoxFit.fill,
-
-                        image:
-                        NetworkImage("https://www.pngall.com/wp-content/uploads/5/Profile-PNG-File.png"))),
+                        image: NetworkImage("https://www.pngall.com/wp-content/uploads/5/Profile-PNG-File.png"))),
               ),
               accountName: new Container(
                   child: Text(
-                    'Roubei o codigo',
+                    'Igor Henrique Rizzi',
                     style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                   )),
               accountEmail: new Container(
                   child: Text(
-                    'pegueisempedir@git.com',
+                    'igor.rizzi2@gmail.com',
                     style: TextStyle(color: Colors.white),
                   )),
             ),
             ListTile(
-              title: Text("lorem"),
+              title: Text("Calculadora"),
               onTap: (){
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => Home()),);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CalculatorPage()),);
               },
             ),
             ListTile(
-              title: Text("item"),
+              title: Text("Sobre"),
               onTap: (){
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => Calculator()),);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => About()),);
               },
-            ),
-            ListTile(
-              title: Text(""),
-              onTap: (){
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => About()),);
-              },
-            ),
+            )
           ]
       )
   );
